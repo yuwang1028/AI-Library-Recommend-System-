@@ -52,7 +52,7 @@ git clone https://github.com/your-github-username/ai-library-chatbot.git
 cd ai-library-chatbot
 ```
 
-### **2️⃣Setup & Run the Backend (FastAPI)
+### 2️⃣Setup & Run the Backend (FastAPI)
 ```sh
 
 python -m venv langchain_env
@@ -65,7 +65,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 uvicorn app:app --reload
 ```
-### **3️⃣ Setup & Run the Frontend
+### 3️⃣ Setup & Run the Frontend
 ```
 python -m http.server 8080
 ```
