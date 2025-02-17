@@ -43,9 +43,31 @@ This project features a **multi-agent AI system** consisting of:
 - **Deployment**: GitHub Pages (Frontend), Render (Backend)  
 
 ---
+## 🚀 **How to Start the Project**
+This guide walks you through **setting up and running** the AI Library Chatbot on your **local machine**.
 
-## 📦 **Installation**
-Clone the repository:
+### **1️⃣ Clone the Repository**
 ```sh
 git clone https://github.com/your-github-username/ai-library-chatbot.git
 cd ai-library-chatbot
+```
+
+### **2️⃣Setup & Run the Backend (FastAPI)
+```sh
+
+python -m venv langchain_env
+source langchain_env/bin/activate  # macOS/Linux
+langchain_env\Scripts\activate     # Windows
+
+pip install -r requirements.txt
+
+OPENAI_API_KEY=your_openai_api_key_here
+
+uvicorn app:app --reload
+```
+### **3️⃣ Setup & Run the Frontend
+```
+python -m http.server 8080
+```
+
+
