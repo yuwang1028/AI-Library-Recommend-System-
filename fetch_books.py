@@ -1,8 +1,9 @@
-import requests
+from security import safe_requests
+
 # Function to fetch book data from Open Library API
 def fetch_books(query):
     search_url = f"https://openlibrary.org/search.json?q={query}&limit=10"
-    response = requests.get(search_url)
+    response = safe_requests.get(search_url)
     
     if response.status_code == 200:
         data = response.json()
@@ -14,7 +15,7 @@ def fetch_books(query):
             
             if work_key:
                 work_url = f"https://openlibrary.org{work_key}.json"
-                work_response = requests.get(work_url)
+                work_response = safe_requests.get(work_url)
                 if work_response.status_code == 200:
                     work_data = work_response.json()
                     if "description" in work_data:
